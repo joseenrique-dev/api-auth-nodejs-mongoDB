@@ -1,10 +1,24 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 
-//Imports Routes
+const { mongoose } = require('./database');
+
+//Routes
 const authRoute = require('./routes/auth');
-//Route Middelware
+
+//Settings
+app.set('port',process.env.PORT || 3000);
+
+//Middleware
+app.use(express.json());
+
+//Route Middlewares
 app.use('/api/user',authRoute);
+app.use(morgan('dev'))
 
 
-app.listen(3000, () => console.log('Up and running :)'));
+
+//Starting the server
+app.listen( app.get('port') ,
+        () => console.log('Up and running :)'));
