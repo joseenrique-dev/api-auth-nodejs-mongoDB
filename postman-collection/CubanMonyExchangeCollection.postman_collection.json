@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "202bf99f-bcaf-4a6c-8b61-88cec647a4f9",
+		"name": "CubanMonyExchangeCollection",
+		"description": "All api query related to Cuban Mony Exchange.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Manolita la Gambá\",\r\n    \"email\":\"manuela@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/user/register",
+				"description": "Register Query."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"qq@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/user/login",
+				"description": "Login request."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
